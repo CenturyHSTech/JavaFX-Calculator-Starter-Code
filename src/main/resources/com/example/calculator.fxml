@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -52,17 +53,15 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label text="F" GridPane.columnIndex="3" GridPane.rowIndex="2">
+      <Label fx:id="tempLabel" text="F" GridPane.columnIndex="3" GridPane.rowIndex="2">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
       </Label>
-      <Spinner id="tempSpinner" fx:id="tempSpinner" prefHeight="25.0" prefWidth="192.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
-         <GridPane.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </GridPane.margin>
-      </Spinner>
-      <Button id="calculateButton" alignment="CENTER_RIGHT" defaultButton="true" mnemonicParsing="false" text="Calculate" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+      <Button id="calculateButton" fx:id="calculateButton" alignment="CENTER_RIGHT" defaultButton="true" mnemonicParsing="false" onAction="#calculateWindchill" text="Calculate" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets right="4.0" />
          </GridPane.margin></Button>
@@ -70,7 +69,7 @@
          <GridPane.margin>
             <Insets left="4.0" />
          </GridPane.margin></Button>
-      <Label id="outputLabel" fx:id="outputLabel" alignment="CENTER" prefHeight="49.0" prefWidth="560.0" text="Enter a windspeed and temperature to get the wind chill." wrapText="true" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+      <Label id="outputLabel" fx:id="outputLabel" alignment="CENTER" prefHeight="49.0" prefWidth="560.0" text="Enter a windspeed and temperature to get the wind chill." wrapText="true" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -78,5 +77,13 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </GridPane.margin>
       </Label>
+      <Slider fx:id="tempSlider" max="50.0" min="-200.0" minorTickCount="5" prefHeight="56.0" prefWidth="212.0" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets top="12.0" />
+         </GridPane.margin>
+      </Slider>
    </children>
 </GridPane>
