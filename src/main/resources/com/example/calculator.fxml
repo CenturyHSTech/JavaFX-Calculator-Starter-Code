@@ -69,7 +69,7 @@
          <GridPane.margin>
             <Insets left="4.0" />
          </GridPane.margin></Button>
-      <Label id="outputLabel" fx:id="outputLabel" alignment="CENTER" prefHeight="49.0" prefWidth="560.0" text="Enter a windspeed and temperature to get the wind chill." wrapText="true" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+      <Label id="outputLabel" fx:id="outputLabel" alignment="CENTER" prefHeight="122.0" prefWidth="560.0" text="Enter a windspeed and temperature to get the wind chill." wrapText="true" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
